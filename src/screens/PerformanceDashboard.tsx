@@ -64,7 +64,7 @@ const PerformanceDashboard = () => {
               labels: memoryData.map(data => data.label),
               datasets: [{ data: memoryData.map(data => parseFloat(data.memoryUsage)) }],
             }}
-            width={Dimensions.get('window').width}  Adjusted for horizontal scrolling
+            width={Dimensions.get('window').width} 
             height={220}
             yAxisSuffix="MB"
             chartConfig={{
