@@ -86,12 +86,12 @@ RCT_EXPORT_METHOD(getMemoryUsage:(RCTPromiseResolveBlock)resolve
         
         [usage addEntriesFromDictionary:[self getNetworkUsage]];
         
-        NSLog(@"Usage: %@", usage);  
+        NSLog(@"usage: %@", usage);  
         
         resolve(usage);
     } else {
-        NSError *error = [NSError errorWithDomain:@"MemoryUsageErrorDomain" code:1 userInfo:@{NSLocalizedDescriptionKey: @"Failed to get usage info"}];
-        reject(@"usage_error", @"Failed to get usage info", error);
+        NSError *error = [NSError errorWithDomain:@"MemoryUsageErrorDomain" code:1 userInfo:@{NSLocalizedDescriptionKey: @"wasn't able to get usage info"}];
+        reject(@"usage_error", @"wasn't able to get usage info", error);
     }
 }
 
